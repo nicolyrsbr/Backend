@@ -1,6 +1,4 @@
-numero = 10;
-let verificarSeEPar = numero % 2 == 0;
+let numero = 10;
+let verificarSeEPar = numero % 2 == 0 ? "Par" : "Impar";
 
-let msg = verificarSeEPar == 0 ? "Par" : "Impar";
-
-console.log(msg);
+console.log(verificarSeEPar);
