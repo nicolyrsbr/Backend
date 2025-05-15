@@ -1,20 +1,19 @@
 let carrinho = [];
 
-function adicionarItem(item){
-    carrinho.push(item)
-    console.log(`${item} foi adicionado ao carinho!`)
-}
+function adicionarItem(item) {
+    carrinho.push(item);
+  }
 
 function removerItem(item) {
     let index = carrinho.indexOf(item);
-    msg = index !== -1 ? carrinho.splice(index, 1) +` foi removido do carrinho.` : `${item} não está no carinho.`
-    console.log(msg)
+    if (index !== -1) {
+        carrinho.splice(index, 1);
+      }    
 }
 
-function listarItem() {
-    msg = carrinho.length === 0 ? `Carrinho está vazio` : `Itens no carrinho: ${carrinho.join(", ")}`
-    console.log(msg)
-}
+function listarItens() {
+    console.log("Itens no carrinho:", carrinho);
+  }
 
 adicionarItem("maçã");
 adicionarItem("pão");
