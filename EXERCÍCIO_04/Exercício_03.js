@@ -1,24 +1,25 @@
 import entradaDados from 'readline-sync';
 
-let valor1 = entradaDados.question('Informe o 1° valor: ');
-let valor2 = entradaDados.question('Informe o 2° valor: ');
-let operacao = entradaDados.question('Informe o tipo da operação(+, -, *, /): ');
+let x = entradaDados.questionFloat('Informe o 1° valor: ');
+let y = entradaDados.questionFloat('Informe o 2° valor: ');
+let op = entradaDados.questionInt('Informe o tipo da operação: \n[1] soma \n[2] Subtração \n[3] Multiplicação \n[4] Divisão\nTipo: ');
 
-switch (operacao) {
-    case operacao = '+': 
-        console.log(`A soma é: ${valor1 + valor2}`);
+switch (op) {
+    case 1: 
+        console.log(`${x} + ${y} = ${x + y}`);
         break;
-    case operacao = '-':
-        console.log(`A subtração é: ${valor1 - valor2}`);
+    case 2:
+        console.log(`${x} - ${y} = ${x - y}`);
         break;
-    case operacao = '*':
-        console.log(`A multiplicação é: ${valor1 * valor2}`);
+    case 3:
+        console.log(`${x} * ${y} = ${x * y}`);
         break;
-    case operacao = '/':
-        console.log(`A divisão é: ${valor1 / valor2}`);
+    case 4:
+        console.log(`${x} / ${y} = ${x / y}`);
         break;
+
     default:
-        console.log(`Não foi possivel realizar a operação`);
+        console.log(`Opção Inválida!`);
         break
 }
 
