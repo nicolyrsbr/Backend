@@ -17,9 +17,7 @@ function listarItens() {
 
 adicionarItem("maçã");
 adicionarItem("pão");
-listarItem();
+listarItens();
 
 removerItem("pão");
-listarItem();
-
-removerItem("leite");
+listarItens();
