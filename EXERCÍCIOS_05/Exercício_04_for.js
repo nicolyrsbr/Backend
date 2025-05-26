@@ -1,13 +1,14 @@
-let a = 0;
-let b = 1;
+let anterior = 0;
+let atual = 1;
 
-console.log(a);
-console.log(b);
+console.log(`---Sequência de Fibonacci---`);
+console.log(anterior);
+console.log(atual);
 
 for (let i = 3; i <= 20; i++) {
-    let proximo = a + b;
+    let proximo = anterior + atual;
     console.log(proximo);
 
-    a = b;
-    b = proximo;
+    anterior = atual;
+    atual = proximo;
 }

@@ -1,4 +1,9 @@
-let pessoa = {nome: "Ana", idade: 20};
-for (let chave in pessoa) {
-    console.log(`${chave}: ${pessoa[chave]}`);
+const pessoa = {
+    nome: 'Ana',
+    idade: 20,
+    sexo: 'M'
+    };
+
+for (let dados in pessoa) {
+    console.log(`${dados}: ${pessoa[dados]}`);
 }

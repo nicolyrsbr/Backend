@@ -1,10 +1,8 @@
 import rl from 'readline-sync';
 
-let totalImposto = 0;
-
-for (let i = 0; i < 10; i++) {
-    let nome = rl.question(`Nome da ${i + 1}ª pessoa: `);
-    let salario = parseFloat(rl.question(`Salário bruto: R$ `));
+for (let i = 1; i < 10; i++) {
+    let nome = rl.question(`Informe o nome da ${i}ª pessoa: `);
+    let salario = rl.questionFloat(`Informe o salário bruto de ${nome}: R$ `);
     let imposto = 0;
 
     if (salario <= 2100) {
@@ -19,10 +17,7 @@ for (let i = 0; i < 10; i++) {
         imposto = salario * 0.275;
     }
 
-    totalImposto += imposto;
-
+    console.log(`\n---Imposto de renda a ser pago---`)
     console.log(`\nNome: ${nome}`);
     console.log(`Imposto a pagar: R$ ${imposto.toFixed(2)}\n`);
 }
-
-console.log(`Total de Imposto de Renda a ser pago pela tEquipe: R$ ${totalImposto.toFixed(2)}`);

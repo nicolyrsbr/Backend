@@ -1,16 +1,16 @@
 import rl from 'readline-sync';
 
-let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+const numeroSecreto = Math.floor(Math.random() * 100) + 1;
 let palpite;
 
 do {
-    palpite = parseInt(rl.question('Adivinhe um número entre 1 e 100: '));
+    palpite = rl.questionInt('Adivinhe um número entre 1 e 100: ');
 
-    if (palpite < numeroSecreto) {
-        console.log(`O número é MAIOR!`);
-    } else if (palpite > numeroSecreto) {
-        console.log(`O número é MENOR!`);
-    } else {
+    if (palpite === numeroSecreto) {
         console.log(`Parabéns! Você acertou!`);
-    }
+    } else if (palpite < numeroSecreto) {
+        console.log(`O número é MAIOR!`);
+    } else{
+        console.log(`O número é MENOR!`);
+    } 
 } while (palpite !== numeroSecreto);
