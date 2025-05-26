@@ -17,6 +17,7 @@ const caixaAlta = function(texto) {
 
 console.log(caixaAlta(frase));
 
+
 //Arrow function
 const tudoMaiusculas = (texto) => texto.toUpperCase();
 
