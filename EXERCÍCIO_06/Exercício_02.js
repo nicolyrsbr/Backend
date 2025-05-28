@@ -27,3 +27,7 @@ const Epar = function (num) {
 console.log(Epar(frase));
 
 //Arrow
+
+const Eimpar = (num) => num % 2 === 0 ? 'É par!!' : 'É impar!!';
+
+console.log(Eimpar(frase))
